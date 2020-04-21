@@ -9,17 +9,17 @@ try{
 	Class.forName("com.mysql.jdbc.Driver");
 	Connection con=DriverManager.getConnection("jdbc:MySQL://localhost:3306/test_bill","root","654321");
 	
-PreparedStatement ps=con.prepareStatement("select * from student2 where name like '%"+n+"%'");
+PreparedStatement ps=con.prepareStatement("select * from student2 where id = '"+n+"'");
 //ps.setString(1,n);
 out.print("<br>");
 ResultSet rs=ps.executeQuery();
 
 out.print("<table border='5' cellspacing=5 cellpadding=2 id='myTable'>");
-out.print("<tr><td><a href='#' name='ID' onmouseover='javascript:viewAllInfo(this.name)'><B>ID</B></a></td><td><B>Name</B></td><td><B>Mobile</B></td></tr>");
+out.print("<tr><td><a href='#' name='ID' onmouseover='javascript:viewAllInfo(this.name)'><B>ID</B></a></td><td><B>Name</B></td><td><B>Total</B></td></tr>");
 while(rs.next()){
 out.print("<tr><td><a href='#' name='"+rs.getString(1)+"' onmouseover='javascript:viewAll(this.name)'>"+rs.getString(1)+"</a></td>");
 out.print("<td>"+rs.getString(2)+"</td>");
-out.print("<td>"+rs.getString(4)+"</td>");
+out.print("<td>"+rs.getString(7)+"</td>");
 out.print("</tr>");
 }
 out.print("</table>");

@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <html>
 
 
@@ -9,7 +9,7 @@
 			
 				<div id="logo">
 					<h1> 
-						Payment Billing System 
+						账单管理系统 
 					</h1>
 				</div>	
 		</div>
@@ -25,19 +25,19 @@
 			<div id="nav">
 					<ul>
 						<li class="first">
-							<a href="home.jsp">Home</a>
+							<a href="home.jsp">主页</a>
 						</li>
 						<li>
-							<a href="generalinfo.jsp">New Registration</a>
+							<a href="generalinfo.jsp">新注册</a>
 						</li>
 						<li>
-							<a href="modify.jsp">Modify Detail</a>
+							<a href="modify.jsp">修改</a>
 						</li>
 						<li>
-							<a href="ahome.jsp">Administrator</a>
+							<a href="ahome.jsp">管理员</a>
 						</li>
 						<li>
-							<a href="contactus.jsp">Contact us</a>
+							<a href="contactus.jsp">联系我们</a>
 						</li>
 					</ul><br class="clear" />
 				</div>

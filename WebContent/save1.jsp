@@ -1,28 +1,45 @@
 <%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
 <%@page import="java.sql.*"%>
+<%@page import="java.text.*"%>
 <%@page import="org.apache.taglibs.standard.tag.common.fmt.SetBundleSupport"%>
 <%try{
+Calendar rightNow = Calendar.getInstance();
 System.out.print(request.getParameter("name"));
-String id=request.getParameter("id");
-out.println(id);
+
+java.util.Date date = new java.util.Date();
+String id = String.format("%d%d%d%d%d%d", 
+	rightNow.get(Calendar.YEAR),
+	rightNow.get(Calendar.MONTH),
+	rightNow.get(Calendar.DAY_OF_MONTH),
+	rightNow.get(Calendar.HOUR_OF_DAY),
+	rightNow.get(Calendar.MINUTE),
+	rightNow.get(Calendar.SECOND));
 String name=request.getParameter("name");
-String course=request.getParameter("course");
-String mobile=request.getParameter("mobile");
-String fathername=request.getParameter("fathername");
-String mothername=request.getParameter("mothername");
-String qualification=request.getParameter("qualification");
-String dateofbirth=request.getParameter("dateofbirth");
-String dateofjoining=request.getParameter("dateofjoining");
-String feesub=request.getParameter("feesub");
+String consumer_id=request.getParameter("consumer_id");
+String engineer_id=request.getParameter("engineer_id");
+String bill_id=request.getParameter("bill_id");
+String qq_id=request.getParameter("qq_id");
+String total=request.getParameter("total");
 String paid=request.getParameter("paid");
-String fee=request.getParameter("fee");
-String balance=request.getParameter("balance");
-String address=request.getParameter("address");
+
+
+String dateofjoining = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
+
+String service=request.getParameter("service");
 String description=request.getParameter("description");
-String trainer=request.getParameter("trainer");
 Class.forName("com.mysql.jdbc.Driver");
 Connection con=DriverManager.getConnection("jdbc:MySQL://localhost:3306/test_bill","root","654321");
-PreparedStatement ps=con.prepareStatement("update student2 set name='"+name+"',course='"+course+"',mobile='"+mobile+"',address='"+address+"',trainer='"+trainer+"',description='"+description+"',dateofbirth='"+dateofbirth+"',dateofjoining='"+dateofjoining+"',qualification='"+qualification+"',feesub='"+feesub+"',fee='"+fee+"',paid='"+paid+"',balance='"+balance+"',fathername='"+fathername+"',mothername='"+mothername+"'  where id= '"+id+"'");
+PreparedStatement ps=con.prepareStatement("update student2 set name='"+name+
+"',consumer_id='"+consumer_id+
+"',engineer_id='"+engineer_id+
+"',bill_id='"+bill_id+
+"',qq_id='"+qq_id+
+"',paid='"+paid+
+"',dateofjoining='"+dateofjoining+
+"',service='"+service+
+"',description='"+description+
+"'  where id= '"+id+
+"'");
 
 int s=ps.executeUpdate();
 System.out.print(s);

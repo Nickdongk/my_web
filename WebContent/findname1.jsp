@@ -8,7 +8,7 @@ if(n.length()>0){
 try{
 	Class.forName("com.mysql.jdbc.Driver");
 	Connection con=DriverManager.getConnection("jdbc:MySQL://localhost:3306/test_bill","root","654321");
-PreparedStatement ps=con.prepareStatement("select * from student2 where name like '%"+n+"%'");
+PreparedStatement ps=con.prepareStatement("select * from student2 where id = '"+n+"'");
 //ps.setString(1,n);
 out.print("<br>");
 ResultSet rs=ps.executeQuery();

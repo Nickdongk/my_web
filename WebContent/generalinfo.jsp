@@ -1,5 +1,5 @@
 
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <html>
 <head>
 <title>
@@ -88,26 +88,19 @@ document.getElementById('hello').innerHTML=val;
 }
 
 function get(obj) {
-      var poststr = "id=" + encodeURI( document.getElementsByName("id").value );
-                    "&name=" + encodeURI( document.getElementsByName("name").value );
-                    "&course=" + encodeURI( document.getElementsByName("course").value );
-                    "&mobile=" + encodeURI( document.getElementsByName("mobile").value );
-                    "&fathername=" + encodeURI( document.getElementsByName("fathername").value );
-                    "&mothername=" + encodeURI( document.getElementsByName("mothername").value );
-                    "&qualification=" + encodeURI( document.getElementsByName("qualification").value );
-                    "&dateofbirth=" + encodeURI( document.getElementsByName("dateofbirth").value );
-                    "&dateofjoining=" + encodeURI( document.getElementsByName("dateofjoining").value );
-                    "&feesub=" + encodeURI( document.getElementsByName("feesub").value );
-                    "&paid=" + encodeURI( document.getElementsByName("paid").value );
-                    "&fee=" + encodeURI( document.getElementsByName("fee").value );
-                    "&balance=" + encodeURI( document.getElementsByName("balance").value );
-                    "&address=" + encodeURI( document.getElementsByName("address").value );
-                    "&description=" + encodeURI( document.getElementsByName("description").value );
-                    "&trainer=" + encodeURI( document.getElementsByName("trainer").value );
-                    
-      makePOSTRequest("save.jsp", poststr);
-   }
-
+    var poststr = "&name=" + encodeURI( document.getElementsByName("name").value );
+                  "&consumer_id=" + encodeURI( document.getElementsByName("consumer_id").value );
+                  "&engineer_id=" + encodeURI( document.getElementsByName("engineer_id").value );
+                  "&bill_id=" + encodeURI( document.getElementsByName("bill_id").value );
+                  "&qq_id=" + encodeURI( document.getElementsByName("qq_id").value );
+                  "&total=" + encodeURI( document.getElementsByName("total").value );
+                  "&paid=" + encodeURI( document.getElementsByName("paid").value );
+                  "&service=" + encodeURI( document.getElementsByName("service").value );
+                  "&description=" + encodeURI( document.getElementsByName("description").value );
+                  
+    makePOSTRequest("save.jsp", poststr);
+ }
+ 
 function makePOSTRequest(url, parameters) {
       http_request=false;
       if (window.XMLHttpRequest) { // Mozilla, Safari,...
@@ -155,7 +148,13 @@ request.setAttribute("notlogin_msg","Sorry,Please do Login first");
 <%
 }
 %>
-
+<% 
+if(request.getAttribute("new_id")!=null){
+	out.print("<font size='2' color='red' m>");
+	out.print("新ID为" + request.getAttribute("new_id"));
+	out.print("</font>");
+	}
+%>
 
 <body width="100">
 
@@ -172,9 +171,6 @@ request.setAttribute("notlogin_msg","Sorry,Please do Login first");
 		<tr><td>
 <table cellspacing=15 cellpadding=15">
 <tr><td><font style="color:navy"><B>Bill Detail:</B></font></td></tr>
-<!--  
-<tr><td><B>ID:</B></td><td><input type="text" name="id"></input></td></tr>
--->
 <tr><td><B>Name:</B></td><td><input type="text" name="name" ></input></td></tr>
 <tr><td><B>Cosumer_id:</B></td><td><input type="text" name="consumer_id"></input></td></tr>
 <tr><td><B>Engineer_id:</B></td><td><input type="text" name="engineer_id"></input></td></tr>
@@ -182,9 +178,6 @@ request.setAttribute("notlogin_msg","Sorry,Please do Login first");
 <tr><td><B>QQ_id:</B></td><td><input type="text" name="qq_id"></input></td></tr>
 <tr><td><B>Total:</B></td><td><input type="text" name="total"></input></td></tr>
 <tr><td><B>Paid:</B></td><td><input type="text" name="paid"></input></td></tr>
-<!--  
-<tr><td><B>Date of Joining:</B></td><td><input type="text" name="dateofjoining" ></input></td></tr>
--->
 <tr><td><B>Service:</B></td><td><input type="text" name="service" ></input></td></tr>
 <tr><td><B>Description:</B></td><td><input type="text" name="description"></input></td></tr>
 <tr><td></td><td><input style="padding:3px 3px" value="Save" type="submit"></td></tr>

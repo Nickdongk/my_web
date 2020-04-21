@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <html>
 	<head>
 		<title>
@@ -12,13 +12,13 @@
 			
 				<div id="logo">
 					<h1>
-						Payment Billing System
+						账单管理系统
 					</h1>
 				</div>	
 		</div>
 			<div id="banner">
 				<div class="captions">
-					<h2>Sign in</h2>
+					<h2>登录</h2>
 				</div>
 				<img src="images/banner.jpg" alt="" />
 			
@@ -27,20 +27,20 @@
 			<div id="nav">
 					<ul>
 						<li class="first">
-							<a href="home.jsp">Home</a>
+							<a href="home.jsp">主页</a>
 						</li>
 						<li>
-							<a href="generalinfo.jsp">New Registration</a>
+							<a href="generalinfo.jsp">新注册</a>
 						</li>
 						<li>
-							<a href="modify.jsp">Modify Detail</a>
+							<a href="modify.jsp">修改</a>
 						</li>
 						<li>
-							<a href="ahome.jsp">Administrator</a>
+							<a href="ahome.jsp">管理员</a>
 						</li>
 						
 						<li>
-							<a href="contactus.jsp">Contact us</a>
+							<a href="contactus.jsp">联系我们</a>
 						</li>
 					</ul><br class="clear" />
 				</div>
@@ -63,31 +63,25 @@
 					}
 					%>
 			<div id="main">
-			<table align="right">
 			
-			<tr align="center"><td style="color: navy;"><B>Notice</B></td></tr>
-			<tr><td><div><marquee direction="up" width="300px" truespeed="truespeed" onmouseover="stop()" onmouseout="start()" style="color: red;">Last Date of fee Submission is 15/10/12
-															     After that You'll have to pay 50 rupees 
-															     per day as a fine and your tutuion fee
-															     exclusively </marquee></div></td></tr></table>
-		<center><a href="admin.jsp"><font style="color: navy; ">Login As Administrator</font></a></center>
+		<center><a href="admin.jsp"><font style="color: navy; ">管理员登录</font></a></center>
 	<div id="sidebar">
 					<div class="box">
 					
 					<form method="post" action="loginprocess.jsp" >
 					<table>
-					<tr><td style="color:navy;"><B> Login Form</B></td></tr>
+					<tr><td style="color:navy;"><B> 登录</B></td></tr>
 					<tr><td><br></td></tr>
-					<tr><td>Branch:</td><td><select name="branch">
-					<option>Select a Branch</option>
+					<tr><td>分支:</td><td><select name="branch">
+					<option>选择分支</option>
 					<option>Ghaziabad</option>
 					<option>Noida</option>
 					<option>Delhi</option>
 					</select></td></tr>
 					<tr><td><br></td></tr>
-					<tr><td>User Name:</td><td><input type="text" name="username"/></td></tr>
+					<tr><td>用户名:</td><td><input type="text" name="username"/></td></tr>
 								<tr><td><br></td></tr>
-					<tr><td>Password:</td><td><input type="password" name="userpass"/></td></tr>	
+					<tr><td>密码:</td><td><input type="password" name="userpass"/></td></tr>	
 							<tr><td><br></td></tr>
 					<tr><td>      </td><td><input type="submit" value="Sign in"></td></tr>
 					</table>

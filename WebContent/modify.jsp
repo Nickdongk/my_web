@@ -1,3 +1,4 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <html>
 <head>
 
@@ -86,24 +87,17 @@ request.setAttribute("notlogin_msg","Sorry,Please do Login first");
 <td><table width="55%" align="left" style="table-layout: fixed;">
 		<tr><td>
 <table cellspacing=15 cellpadding=15">
-<tr><td><font style="color:navy"><B>Student Detail:</B></font></td></tr>
-<tr><td><B>ID:</B></td><td><input type="text" name="id"></input></td></tr>
+<tr><td><font style="color:navy"><B>Bill Detail:</B></font></td></tr>
 <tr><td><B>Name:</B></td><td><input type="text" name="name" ></input></td></tr>
-<tr><td><B>Course:</B></td><td><input type="text" name="course"></input></td></tr>
-<tr><td><B>Mobile:</B></td><td><input type="text" name="mobile"></input></td></tr>
-<tr><td><B>Father's Name:</B></td><td><input type="text" name="fathername"></input></td></tr>
-<tr><td><B>Mother's Name:</B></td><td><input type="text" name="mothername"></input></td></tr>
-<tr><td><B>Qualification:</B></td><td><input type="text" name="qualification"></input></td></tr>
-<tr><td><B>Date of Birth:</B></td><td><input type="text" name="dateofbirth"></input></td></tr>
-<tr><td><B>Date of Joining:</B></td><td><input type="text" name="dateofjoining" ></input></td></tr>
-<tr><td><B>Date of Submission:</B></td><td><input type="text" name="feesub" ></input></td></tr>
-<tr><td><B>Paid:</B></td><td><input type="text" name="paid" ></input></td></tr>
-<tr><td><B>Fee:</B></td><td><input type="text" name="fee" ></input></td></tr>
-<tr><td><B>Balance:</B></td><td><input type="text" name="balance" ></input></td></tr>
-<tr><td><B>Address:</B></td><td><input type="text" name="address"></input></td></tr>
+<tr><td><B>Cosumer_id:</B></td><td><input type="text" name="consumer_id"></input></td></tr>
+<tr><td><B>Engineer_id:</B></td><td><input type="text" name="engineer_id"></input></td></tr>
+<tr><td><B>Bill_id:</B></td><td><input type="text" name="bill_id"></input></td></tr>
+<tr><td><B>QQ_id:</B></td><td><input type="text" name="qq_id"></input></td></tr>
+<tr><td><B>Total:</B></td><td><input type="text" name="total"></input></td></tr>
+<tr><td><B>Paid:</B></td><td><input type="text" name="paid"></input></td></tr>
+<tr><td><B>Service:</B></td><td><input type="text" name="service" ></input></td></tr>
 <tr><td><B>Description:</B></td><td><input type="text" name="description"></input></td></tr>
-<tr><td><B>Trainer:</B></td><td><input type="text" name="trainer"></input></td></tr>
-<tr><td></td><td><input style="padding:3px 3px" value=" Edit & Save" type="submit"></td></tr>
+<tr><td></td><td><input style="padding:3px 3px" value="Save" type="submit"></td></tr>
 </table>
 
 		

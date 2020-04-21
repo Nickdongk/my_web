@@ -1,5 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
-<%@page import="org.omg.CORBA.PUBLIC_MEMBER"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
 <%@page import="java.util.*"%>
 <%
@@ -29,8 +28,8 @@ session.setAttribute("islogin","plz sign in first");
 }
 else{
 System.out.print("hi");
-request.setAttribute("Error","Sorry! Username or Password Error. Plz Enter Correct Detail ");
-session.setAttribute("Loginmsg","Plz sign in first");
+request.setAttribute("Error","对不起！用户名或者密码错误！");
+session.setAttribute("Loginmsg","请先登录！");
 %>
 <jsp:forward page="index.jsp"></jsp:forward>
 <%

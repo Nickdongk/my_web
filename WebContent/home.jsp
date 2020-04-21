@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <html>
 <head>
 <title>
@@ -135,7 +135,13 @@ request.setAttribute("notlogin_msg","Sorry,Please do Login first");
 <%
 }
 %>
-
+<% 
+					if(request.getAttribute("delete_msg")!=null){
+					out.print("<font size='2' color='red' m>");
+					out.print(request.getAttribute("delete_msg"));
+					out.print("</font>");
+					}
+					%>
 
 <body width="100">
 

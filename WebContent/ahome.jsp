@@ -1,9 +1,9 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <html>
 
 <head>
 <title>
-			Admin Home
+			管理员
 		</title>
 <script>
 var request;
