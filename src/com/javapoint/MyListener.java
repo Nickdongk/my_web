@@ -13,7 +13,9 @@ public class MyListener implements ServletContextListener{
 		Class.forName("com.mysql.jdbc.Driver");
 		con=DriverManager.getConnection("jdbc:MySQL://localhost:3306/test_bill","root","654321");
 		
-		PreparedStatement ps=con.prepareStatement("CREATE TABLE STUDENT2 (ID VARCHAR(32), "
+		PreparedStatement ps=con.prepareStatement("CREATE TABLE STUDENT2 ("
+				+ "ID VARCHAR(32), "
+				+ "NAME VARCHAR(128),"
 				+ "CONSUMER_ID VARCHAR(128), "
 				+ "ENGINEER_ID VARCHAR(128), "
 				+ "BILL_ID VARCHAR(400), "
